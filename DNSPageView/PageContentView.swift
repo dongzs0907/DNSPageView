@@ -241,9 +241,10 @@ extension PageContentView: PageTitleViewDelegate {
         
         currentIndex = index
 
-        let indexPath = IndexPath(item: index, section: 0)
-        
-        collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+//        let indexPath = IndexPath(item: index, section: 0)
+//
+//        collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+        collectionView.setContentOffset(CGPoint.init(x: Int(UIScreen.main.bounds.size.width) * index, y: 0), animated: false)
     }
 }
 
